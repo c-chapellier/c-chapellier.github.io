@@ -1,0 +1,29 @@
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-light-black);
+    height: var(--header-height);
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 1.2rem;
+}
+
+.logoComponent {
+    height: 1.2rem;
+    width: 4rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-right: 3rem;
+}
