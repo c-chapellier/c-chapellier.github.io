@@ -10,7 +10,14 @@
 .textAndCode {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
+    overflow: auto;
+    height: 100%;
+}
+
+.code {
+    padding: 2rem;
+    padding-top: 4rem;
 }
 
 .codeLine {
@@ -21,13 +28,13 @@
 .text {
     background-color: var(--color-dark-black);
     border-radius: 2rem;
+    margin-top: 30%;
     padding: 2rem;
 
     border-top: 0.3rem solid var(--color-1);
     border-right: 0.3rem solid var(--color-2);
     border-bottom: 0.3rem solid var(--color-3);
     border-left: 0.3rem solid var(--color-4);
-    // transform: rotate(45deg)
 }
 
 h1 {
@@ -48,23 +55,23 @@ h4 {
 }
 
 img {
-    // display: flex;
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    margin: 25px 0;
     width: 33%;
     border-radius: 50%;
-    border: 1rem solid transparent;
+    padding: 0.3rem;
     background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
     background-repeat: no-repeat;
-    background-image: linear-gradient(0, var(--color-red) 100%, white),
-                      linear-gradient(0, var(--color-yellow) 100%, white),
-                      linear-gradient(0, var(--color-blue) 100%, white),
-                      linear-gradient(0, var(--color-green) 100%, white);
-    background-position: left top, right top, left bottom, right bottom;
+    background-image: linear-gradient(0, var(--color-1) 100%, white),
+                      linear-gradient(0, var(--color-2) 100%, white),
+                      linear-gradient(0, var(--color-3) 100%, white),
+                      linear-gradient(0, var(--color-4) 100%, white);
+    background-position: left top, right top, right bottom, left bottom;
     background-origin: border-box, border-box, border-box, border-box;
     background-clip: border-box, border-box, border-box, border-box;
-    // transform: rotate(30deg);
+
+    transition: all 5s ease-in;
+    transition-property: background-position;
+}
+
+img:hover {
+    background-position: right top, right bottom, left bottom, left top;
 }

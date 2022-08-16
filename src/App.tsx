@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.scss'
-import Home from './components/home/Home'
-// import Contact from './components/contact/Contact'
-import Footer from './components/footer/Footer'
-import Header from './components/header/Header'
-import Developer from './components/developer/Developer'
+import Home from './pages/home/Home'
+// import Contact from './pages/contact/Contact'
+import Footer from './pages/footer/Footer'
+import Header from './pages/header/Header'
+import Developer from './pages/developer/Developer'
 
 const App: React.FC<any> = () => {
   return (

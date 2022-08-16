@@ -4,19 +4,19 @@ import './Home.scss'
 declare function require (path: string): any
 
 const Home: React.FC<any> = () => {
-  const [displayedLines, setDisplayedLines] = React.useState(0)
+  // const [displayedLines, setDisplayedLines] = React.useState(0)
 
-  const handleScroll: any = () => {
-    setDisplayedLines(window.pageYOffset / 6)
-  }
+  // const handleScroll: any = () => {
+  //   setDisplayedLines(window.pageYOffset / 6)
+  // }
 
-  React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+  // React.useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll)
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll)
+  //   }
+  // }, [])
 
   const lines = [
     (
@@ -196,10 +196,41 @@ const Home: React.FC<any> = () => {
 
         <div className='code'>
           {
-            lines.map((line, index) => index < displayedLines && (
+            lines.map((line) => (
               line
             ))
           }
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+
         </div>
       </div>
 
