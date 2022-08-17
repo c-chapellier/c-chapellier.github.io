@@ -1,22 +1,22 @@
 import React from 'react'
 import './Home.scss'
 
-declare function require (path: string): any
+// declare function require (path: string): any
 
 const Home: React.FC<any> = () => {
-  // const [displayedLines, setDisplayedLines] = React.useState(0)
+  const [displayedLines, setDisplayedLines] = React.useState(0)
 
-  // const handleScroll: any = () => {
-  //   setDisplayedLines(window.pageYOffset / 6)
-  // }
+  const handleScroll: any = () => {
+    setDisplayedLines((window.pageYOffset - 60) / 10)
+  }
 
-  // React.useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll)
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
 
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll)
-  //   }
-  // }, [])
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const lines = [
     (
@@ -173,68 +173,46 @@ const Home: React.FC<any> = () => {
   ]
 
   return (
-    <section id='home' className='home'>
+    <section id='home'>
+      <div className='home'>
+        <div className='textAndCode'>
+          <div className='text'>
+            <div className='textLine'>
+              <h1 style={{ color: 'var(--color-1' }}>Hi!</h1>
+            </div>
+            <div className='textLine'>
+              <h1>My name is&nbsp;</h1>
+              <h1 style={{ color: 'var(--color-2' }}>Corentin Chapellier</h1>
+            </div>
+            <div className='textLine'>
+              <h4>I am a&nbsp;</h4>
+              <h4 style={{ color: 'var(--color-3' }}>Software Developer</h4>
+            </div>
+            <div className='textLine'>
+              <h4>Here is my&nbsp;</h4>
+              <h4 style={{ color: 'var(--color-4' }}>Personal Site</h4>
+            </div>
+          </div>
 
-      <div className='textAndCode'>
-        <div className='text'>
-          <div className='twoColorDiv'>
-            <h1 className='twoColor' style={{ color: 'var(--color-1' }}>Hi!</h1>
-          </div>
-          <div className='twoColorDiv'>
-            <h1>My name is&nbsp;</h1>
-            <h1 className='twoColor' style={{ color: 'var(--color-2' }}>Corentin Chapellier</h1>
-          </div>
-          <div className='twoColorDiv'>
-            <h4>I am a&nbsp;</h4>
-            <h4 className='twoColor' style={{ color: 'var(--color-3' }}>Software Developer</h4>
-          </div>
-          <div className='twoColorDiv'>
-            <h4>Here is my&nbsp;</h4>
-            <h4 className='twoColor' style={{ color: 'var(--color-4' }}>Personal Site</h4>
+          <div className='code'>
+            {
+              lines.map((line, index) => index < displayedLines
+                ? (line)
+                // : (line)
+                : (<div key={index} className='codeLine'>&nbsp;</div>)
+              )
+            }
           </div>
         </div>
 
-        <div className='code'>
-          {
-            lines.map((line) => (
-              line
-            ))
-          }
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-          <div>&nbsp;</div>
-
+        <div className='profilePictureWrapperWrapper'>
+          <div className='spacerTop'></div>
+          <div className='profilePictureWrapper'>
+            <div className='profilePictureBackground' />
+            <img src={require('../../assets/ProfilePicture.jpg')} alt="profile picture" className='profilePicture'/>
+          </div>
         </div>
       </div>
-
-      <img src={require('../../assets/ProfilePicture.jpg')} alt="profile picture" />
     </section>
   )
 }

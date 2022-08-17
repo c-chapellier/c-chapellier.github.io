@@ -8,18 +8,6 @@ header {
     height: var(--header-height);
 }
 
-.logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-left: 1.2rem;
-}
-
-.logoComponent {
-    height: 1.2rem;
-    width: 4rem;
-}
-
 .links {
     display: flex;
     flex-direction: row;

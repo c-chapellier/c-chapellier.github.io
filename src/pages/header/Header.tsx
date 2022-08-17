@@ -1,4 +1,5 @@
 import React from 'react'
+import Logo from '../../components/logo/Logo'
 import NavButton from '../../components/navButton/NavButton'
 import './Header.scss'
 
@@ -12,13 +13,7 @@ const Header: React.FC<any> = () => {
 
   return (
     <header>
-      <div className='logo'>
-        {
-          [1, 2, 3, 4].map((i) => (
-            <div key={i} className='logoComponent' style={ { backgroundColor: `var(--color-${i})` } }></div>
-          ))
-        }
-      </div>
+      <Logo />
 
       <div className='links'>
         {

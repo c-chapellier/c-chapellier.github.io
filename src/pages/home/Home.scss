@@ -1,42 +1,4 @@
 
-.home {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    height: calc(100vh - var(--header-height));
-}
-
-.textAndCode {
-    display: flex;
-    flex-direction: column;
-    // justify-content: space-evenly;
-    overflow: auto;
-    height: 100%;
-}
-
-.code {
-    padding: 2rem;
-    padding-top: 4rem;
-}
-
-.codeLine {
-    display: flex;
-    flex-direction: row;
-}
-
-.text {
-    background-color: var(--color-dark-black);
-    border-radius: 2rem;
-    margin-top: 30%;
-    padding: 2rem;
-
-    border-top: 0.3rem solid var(--color-1);
-    border-right: 0.3rem solid var(--color-2);
-    border-bottom: 0.3rem solid var(--color-3);
-    border-left: 0.3rem solid var(--color-4);
-}
-
 h1 {
     font-size: 2rem;
 }
@@ -45,33 +7,98 @@ h4 {
     font-size: 1.3rem;
 }
 
-.twoColorDiv {
+.home {
+    position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
-.twoColor {
-    color: var(--color-blue);
+.textAndCode {
+    padding-top: 13%;
+    display: flex;
+    flex-direction: column;
+
+    .code {
+        padding: 2rem;
+    
+        .codeLine {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    
+    .text {
+        background-color: var(--color-dark-black);
+        border-radius: 2rem;
+        padding: 2rem;
+    
+        border-top: 0.3rem solid var(--color-1);
+        border-right: 0.3rem solid var(--color-2);
+        border-bottom: 0.3rem solid var(--color-3);
+        border-left: 0.3rem solid var(--color-4);
+
+        .textLine {
+            display: flex;
+            flex-direction: row;
+        }
+    }
 }
 
-img {
-    width: 33%;
-    border-radius: 50%;
-    padding: 0.3rem;
-    background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(0, var(--color-1) 100%, white),
-                      linear-gradient(0, var(--color-2) 100%, white),
-                      linear-gradient(0, var(--color-3) 100%, white),
-                      linear-gradient(0, var(--color-4) 100%, white);
-    background-position: left top, right top, right bottom, left bottom;
-    background-origin: border-box, border-box, border-box, border-box;
-    background-clip: border-box, border-box, border-box, border-box;
+.profilePictureWrapperWrapper {
 
-    transition: all 5s ease-in;
-    transition-property: background-position;
+    .spacerTop {
+        height: calc((100vh - 33vw) / 2);
+    }
 }
 
-img:hover {
-    background-position: right top, right bottom, left bottom, left top;
+.profilePictureWrapper {
+    width: 33vw;
+    height: 33vw;
+    position: sticky;
+    margin-top: 0;
+    top: calc((100vh - 33vw) / 2);
+
+    .profilePictureBackground {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(0, var(--color-1) 100%, white),
+                        linear-gradient(0, var(--color-2) 100%, white),
+                        linear-gradient(0, var(--color-3) 100%, white),
+                        linear-gradient(0, var(--color-4) 100%, white);
+        background-position: left top, right top, right bottom, left bottom;
+        background-origin: border-box, border-box, border-box, border-box;
+        background-clip: border-box, border-box, border-box, border-box;
+
+        transition-property: transform;
+        transition-duration: 2s;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    &.profilePictureWrapper:hover .profilePictureBackground {
+        animation-name: rotate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .profilePicture {
+        position: relative;
+        width: 94%;
+        height: 94%;
+        top: calc(-33vw + 15px);
+        left: 3%;
+        border-radius: 50%;
+    }
 }
