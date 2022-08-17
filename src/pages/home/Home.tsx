@@ -178,19 +178,19 @@ const Home: React.FC<any> = () => {
         <div className='textAndCode'>
           <div className='text'>
             <div className='textLine'>
-              <h1 style={{ color: 'var(--color-1' }}>Hi!</h1>
+              <h1 style={{ color: 'var(--color-1)' }}>Hi!</h1>
             </div>
             <div className='textLine'>
               <h1>My name is&nbsp;</h1>
-              <h1 style={{ color: 'var(--color-2' }}>Corentin Chapellier</h1>
+              <h1 style={{ color: 'var(--color-2)' }}>Corentin Chapellier</h1>
             </div>
             <div className='textLine'>
               <h4>I am a&nbsp;</h4>
-              <h4 style={{ color: 'var(--color-3' }}>Software Developer</h4>
+              <h4 style={{ color: 'var(--color-3)' }}>Software Developer</h4>
             </div>
             <div className='textLine'>
               <h4>Here is my&nbsp;</h4>
-              <h4 style={{ color: 'var(--color-4' }}>Personal Site</h4>
+              <h4 style={{ color: 'var(--color-4)' }}>Personal Site</h4>
             </div>
           </div>
 
@@ -198,7 +198,6 @@ const Home: React.FC<any> = () => {
             {
               lines.map((line, index) => index < displayedLines
                 ? (line)
-                // : (line)
                 : (<div key={index} className='codeLine'>&nbsp;</div>)
               )
             }

@@ -1,5 +1,61 @@
 
 .contactDeveloperTransition {
-    height: calc((100vh - 33vw) / 2);
-    width: 100%;
+
+    .spacerTop {
+        height: calc((100vh - 33vw) / 2);
+        width: 100%;
+    }    
+
+    .transition1 {
+        height: 120px;
+        width: 100%;
+    
+        --color: var(--color-engineer-4-2);
+        background-color: var(--color-dark-black);
+    
+        background-size: 20px 20px;
+        background-position: 0 0, 10px 10px;
+        background-image: linear-gradient(45deg, var(--color) 25%, transparent 25%, transparent 75%, var(--color) 75%, var(--color)),
+                          linear-gradient(45deg, var(--color) 25%, transparent 25%, transparent 75%, var(--color) 75%, var(--color));
+    }
+    
+    .spacerTransition1 {
+        height: 10px;
+        width: 100%;
+    
+        background-color: var(--color-engineer-4-2);
+    }
+    
+    .transition2 {
+        height: 120px;
+        width: 100%;
+    
+        --color: var(--color-engineer-4-2);
+        background-color: var(--color-engineer-4-1);
+    
+        background-size: 20px 20px;
+        background-position: 0 0, 10px 10px;
+        background-image: linear-gradient(45deg, var(--color) 25%, transparent 25%, transparent 75%, var(--color) 75%, var(--color)),
+                          linear-gradient(45deg, var(--color) 25%, transparent 25%, transparent 75%, var(--color) 75%, var(--color));
+    }
+    
+    .spacerTransition2 {
+        height: 10px;
+        width: 100%;
+    
+        background-color: var(--color-engineer-4-1);
+    }
+    
+    .transition3 {
+        height: 120px;
+        width: 100%;
+    
+        --color: var(--color-engineer-4);
+        background-color: var(--color-engineer-4-1);
+    
+        background-size: 20px 20px;
+        background-position: 0 0, 10px 10px;
+        background-image: linear-gradient(45deg, var(--color) 25%, transparent 25%, transparent 75%, var(--color) 75%, var(--color)),
+                          linear-gradient(45deg, var(--color) 25%, transparent 25%, transparent 75%, var(--color) 75%, var(--color));
+    }
 }

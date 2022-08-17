@@ -1,0 +1,118 @@
+
+@keyframes translate {
+    from {
+        transform: translateX(-106px);
+    }
+    to {
+        transform: translateX(calc(100vw - 106px));
+    }
+}
+
+.car {
+    position: relative;
+    width: 212px;
+
+    transition-property: transform;
+    transition-duration: 3s;
+
+    animation-name: translate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    .rect {
+        width: 150px;
+        height: 100px;
+        background: var(--color-car-2);
+        position: relative;
+    }
+    
+    .front {
+        position: absolute;
+        top: 25px;
+        right: 0;
+        background: var(--color-car-2);
+        width: 60px;
+        height: 70px;
+        border-radius: 0 55px 0 0;
+
+        .window {
+            position: absolute;
+            background: var(--color-car-1);
+            width: 42px;
+            height: 15px;
+            border-radius: 0 15px 0 0;
+            padding-bottom: 10px;
+            top: 18px;
+            left: 7px;
+        }
+        
+        .f_hood {
+            position: absolute;
+            background: var(--color-car-2);
+            width: 68px;
+            height: 30px;
+            border-radius: 0 5px 5px 0;
+            bottom: -7px;
+        }
+    }
+    
+    .hood {
+        width: 225px;
+        background: var(--color-car-2);
+        height: 7px;
+        position: absolute;
+        left: -3px;
+        bottom: -2px;
+        border-radius: 3px;
+    }
+    
+    .tyres,
+    .f_tyres {
+        width: 30px;
+        height: 30px;
+        background: var(--color-car-2);
+        border-radius: 30px;
+        position: absolute;
+        border: 2px solid var(--color-car-2);
+        bottom: -15px;
+        z-index: 1;
+    
+        transition-property: transform;
+        transition-duration: 0.3s;
+        animation-name: rotate;
+        animation-duration: 0.6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+    
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .tyres {
+        left: 10px;
+    }
+    
+    .f_tyres {
+        right: 10px;
+    }
+    
+    .tyres::after,
+    .f_tyres::after {
+        content: "";
+        background: var(--color-car-1);
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        top: 2px;
+        left: 2px;
+        position: absolute;
+    }
+}
