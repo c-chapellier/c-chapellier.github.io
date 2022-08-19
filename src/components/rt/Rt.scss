@@ -1,0 +1,21 @@
+
+.rt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .inputScene {
+        width: 50%;
+    }
+
+    .inputVec3 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .inputSphere {
+        padding: 1rem;
+        border: 2px solid green;
+        border-radius: 4px;
+    }
+}

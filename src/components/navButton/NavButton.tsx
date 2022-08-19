@@ -26,7 +26,7 @@ const NavButton: React.FC<NavButtonProps> = (props) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
-        color: `var(--color-${colorIndex}`,
+        color: `var(--color-${colorIndex})`,
         background: isHover ? 'var(--color-dark-black)' : ''
       }}
     >
