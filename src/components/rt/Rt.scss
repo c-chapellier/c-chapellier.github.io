@@ -1,5 +1,7 @@
 
 .rt {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -11,6 +13,22 @@
     .inputVec3 {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        // background: green;
+
+        p {
+            font-size: 0.8em;
+            text-align: right;
+            color: var(--color-black);
+            width: 40%;
+            padding-right: 2px;
+        }
+
+        .inputVec3Fields {
+            display: flex;
+            flex-direction: row;
+            width: 60%;
+        }
     }
 
     .inputSphere {

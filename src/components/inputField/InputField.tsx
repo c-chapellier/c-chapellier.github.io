@@ -12,7 +12,7 @@ const InputField: React.FC<InputFieldProps> = (props) => {
 
   return (
     <div className='inputField'>
-      <label>{name}</label>
+      <p>{name}:</p>
       <input className='inputInteger' type="number" name={name} value={value} onChange={e => setValue(Number(e.target.value))} />
     </div>
   )

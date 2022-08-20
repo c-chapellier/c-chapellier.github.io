@@ -232,13 +232,14 @@ char* rt(char *unparsed_scene)
         for (int x = 0; x < scene.pixel_width; ++x)
         {
             vec3_t ray = vec3_sub((vec3_t) { x - scene.pixel_width / 2, y - scene.pixel_height / 2, 0. }, scene.camera);
-            if (ray_sphere_intersect(scene.spheres[0], scene.camera, ray))
+            pixels[y][x] = (vec3_t) { .0, .0, .0 };
+            
+            for (int i = 0; i < scene.n_spheres; ++i)
             {
-                pixels[y][x] = scene.spheres[0].color;
-            }
-            else
-            {
-                pixels[y][x] = (vec3_t) { .0, .0, .0 };
+                if (ray_sphere_intersect(scene.spheres[i], scene.camera, ray))
+                {
+                    pixels[y][x] = scene.spheres[i].color;
+                }
             }
         }
     }
