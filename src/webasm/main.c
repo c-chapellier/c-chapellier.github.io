@@ -5,6 +5,19 @@
 
 int main()
 {
-    printf("%s", rt("{\"pixelHeight\":400,\"pixelWidth\":400,\"camera\":{\"x\":0,\"y\":0,\"z\":-70},\"nSpheres\":1,\"spheres\":[{\"center\":{\"x\":0,\"y\":0,\"z\":0},\"color\":{\"x\":0,\"y\":0,\"z\":30},\"radius\":50}]}"));
+
+    FILE *fp;
+    char buffer[1000];
+
+    fp = fopen("scene.txt", "r");
+
+    fseek(fp, 0L, SEEK_END);
+    int sz = ftell(fp);
+    fseek(fp, 0L, SEEK_SET);
+
+    fread(buffer, sz+1, 1, fp);
+    fclose(fp);
+
+    printf("%s", rt(buffer));
     return 0;
 }

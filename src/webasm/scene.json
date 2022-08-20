@@ -1,0 +1,38 @@
+{
+    "pixelHeight": 400,
+    "pixelWidth": 400,
+    "camera": {
+        "x": 0,
+        "y": 0,
+        "z": -70
+    },
+    "nSpheres": 2,
+    "spheres": [
+        {
+            "center": {
+                "x": 0,
+                "y": -30,
+                "z": 0
+            },
+            "color": {
+                "x": 0.1,
+                "y": 0.3,
+                "z": 0.5
+            },
+            "radius": 40
+        },
+        {
+            "center": {
+                "x": 0,
+                "y": 30,
+                "z": 0
+            },
+            "color": {
+                "x": 0.8,
+                "y": 0.1,
+                "z": 0.1
+            },
+            "radius": 50
+        }
+    ]
+}
