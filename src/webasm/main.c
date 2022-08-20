@@ -1,7 +1,7 @@
 
 #define MAIN
 
-#include "rt.c"
+#include "./rt/rt.c"
 
 int main()
 {

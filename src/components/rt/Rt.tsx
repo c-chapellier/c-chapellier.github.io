@@ -19,6 +19,7 @@ interface Sphere {
 interface Scene {
   pixelHeight: number
   pixelWidth: number
+  antialiasing: number
   camera: Vec3
   nSpheres: number
   spheres: Sphere[]
@@ -29,6 +30,7 @@ const Rt: React.FC<any> = () => {
   const [scene, setScene] = React.useState<Scene>({
     pixelHeight: 400,
     pixelWidth: 400,
+    antialiasing: 1,
     camera: {
       x: 0,
       y: 0,
@@ -113,6 +115,7 @@ const Rt: React.FC<any> = () => {
       <form className='inputScene'>
         <InputField name='pixelHeight' value={scene.pixelHeight} setValue={(value: number) => { updateScene('pixelHeight', value) }} />
         <InputField name='pixelWidth' value={scene.pixelWidth} setValue={(value: number) => { updateScene('pixelWidth', value) }} />
+        <InputField name='antialiasing' value={scene.antialiasing} setValue={(value: number) => { updateScene('antialiasing', value) }} />
 
         <div className='inputVec3'>
           <p>camera:</p>

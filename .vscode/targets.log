@@ -6,8 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Sat Aug 20 10:53:53 2022
+
+# Make data base, printed on Sat Aug 20 21:16:15 2022
 
 # Variables
 
@@ -83,6 +86,8 @@ XPC_FLAGS = 0x0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
+# makefile (from `Makefile', line 2)
+SRCS = src/webasm/create_buffer.c src/webasm/rt/rt.c src/webasm/rt/utils.c src/webasm/rt/vec3.c src/webasm/rt/sphere.c src/webasm/rt/scene.c src/webasm/rt/camera.c
 # environment
 SHLVL = 1
 # default
@@ -148,7 +153,7 @@ LANG = C
 # environment
 VSCODE_PID = 1840
 # variable set hash-table stats:
-# Load=68/1024=7%, Rehash=0, Collisions=1/92=1%
+# Load=69/1024=7%, Rehash=0, Collisions=1/94=1%
 
 # Pattern-specific Variable Values
 
@@ -167,6 +172,12 @@ VSCODE_PID = 1840
 # Files
 
 # Not a target:
+src/webasm/create_buffer.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 all:
 #  Command-line target.
 #  Implicit rule search has been done.
@@ -175,12 +186,12 @@ all:
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-src/webasm/rt.mjs: src/webasm/rt.c
+src/webasm/rt.mjs: src/webasm/create_buffer.c src/webasm/rt/rt.c src/webasm/rt/utils.c src/webasm/rt/vec3.c src/webasm/rt/sphere.c src/webasm/rt/scene.c src/webasm/rt/camera.c
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 2):
-	emcc --no-entry src/webasm/rt.c -o src/webasm/rt.mjs  \
+#  commands to execute (from `Makefile', line 11):
+	emcc --no-entry ${SRCS} -o src/webasm/rt.mjs  \
 	-s ENVIRONMENT='web'  \
 	-s SINGLE_FILE=1  \
 	-s EXPORT_NAME='createModule'  \
@@ -200,11 +211,29 @@ src/webasm/rt.mjs: src/webasm/rt.c
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-18 23:04:27
+#  Last modified 2022-08-20 21:14:37
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/webasm/rt/camera.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/webasm/rt/sphere.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/webasm/rt/scene.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -213,13 +242,25 @@ Makefile:
 #  File has not been updated.
 
 # Not a target:
-src/webasm/rt.c:
+src/webasm/rt/rt.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/webasm/rt/utils.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/webasm/rt/vec3.c:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/19=0%
+# Load=12/1024=1%, Rehash=0, Collisions=0/31=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -231,8 +272,6 @@ src/webasm/rt.c:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Aug 20 10:53:53 2022
+# Finished Make data base on Sat Aug 20 21:16:15 2022
 
  
-make: *** No rule to make target `all'.  Stop.
-

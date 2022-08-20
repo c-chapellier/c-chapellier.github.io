@@ -1,30 +1,18 @@
 {
     "pixelHeight": 400,
     "pixelWidth": 400,
+    "antialiasing": 4,
     "camera": {
         "x": 0,
         "y": 0,
-        "z": -70
+        "z": -100
     },
-    "nSpheres": 2,
+    "nSpheres": 1,
     "spheres": [
         {
             "center": {
                 "x": 0,
-                "y": -30,
-                "z": 0
-            },
-            "color": {
-                "x": 0.1,
-                "y": 0.3,
-                "z": 0.5
-            },
-            "radius": 40
-        },
-        {
-            "center": {
-                "x": 0,
-                "y": 30,
+                "y": 0,
                 "z": 0
             },
             "color": {
@@ -32,7 +20,7 @@
                 "y": 0.1,
                 "z": 0.1
             },
-            "radius": 50
+            "radius": 30
         }
     ]
 }
