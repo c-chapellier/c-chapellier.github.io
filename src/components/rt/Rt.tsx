@@ -109,6 +109,16 @@ const Rt: React.FC<any> = () => {
     // api.destroy_buffer(p)
   })
 
+  const onAddSphere = (): void => {
+    scene.spheres.push({
+      center: { x: 0, y: 0, z: 0 },
+      color: { x: 1, y: 1, z: 1 },
+      radius: 10
+    })
+    scene.nSpheres += 1
+    setScene({ ...scene })
+  }
+
   return (
     <div className='rt'>
       <img src={`data:image/bmp;base64,${image}`} />
@@ -151,6 +161,14 @@ const Rt: React.FC<any> = () => {
             </>
           ))
         }
+
+        <button
+          type='button'
+          className='addSphere'
+          onClick={onAddSphere}
+        >
+          Add sphere
+        </button>
       </form>
     </div>
   )
