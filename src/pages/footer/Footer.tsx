@@ -1,16 +1,10 @@
 import React from 'react'
 import Logo from '../../components/logo/Logo'
 import NavButton from '../../components/navButton/NavButton'
+import { menus } from '../../utils/constants'
 import './Footer.scss'
 
 const Footer: React.FC<any> = () => {
-  const menus = [
-    'Developer',
-    'Engineer',
-    'Other',
-    'Contact'
-  ]
-
   return (
     <footer>
       <Logo />

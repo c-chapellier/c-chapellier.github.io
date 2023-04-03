@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
 import React from 'react'
-import './Rt.scss'
 import createModule from '../../webasm/rt.mjs'
 import InputField from '../inputField/InputField'
+import './Rt.scss'
 
 interface Vec3 {
   x: number
@@ -82,31 +82,36 @@ const Rt: React.FC<any> = () => {
   }
 
   createModule().then((Module: any) => {
-    const api = {
-      create_buffer: Module.cwrap('create_buffer', 'number', ['number'])
-      // destroy_buffer: Module.cwrap('destroy_buffer', '', ['number'])
-    }
+    try {
+      const api = {
+        create_buffer: Module.cwrap('create_buffer', 'number', ['number'])
+        // destroy_buffer: Module.cwrap('destroy_buffer', '', ['number'])
+      }
 
-    console.log(JSON.stringify(scene))
+      console.log(JSON.stringify(scene))
 
-    const utf8Encode = new TextEncoder()
-    const a = utf8Encode.encode(JSON.stringify(scene))
+      const utf8Encode = new TextEncoder()
+      const a = utf8Encode.encode(JSON.stringify(scene))
 
-    const inputPtr = api.create_buffer(a.length)
-    Module.HEAPU8.set(a, inputPtr)
+      const inputPtr = api.create_buffer(a.length)
+      Module.HEAPU8.set(a, inputPtr)
 
-    const outputPtr = Module._rt(inputPtr)
+      console.log('inputPtr', inputPtr)
+      const outputPtr = Module._rt(inputPtr)
 
-    const base64Size = ((26 + (scene.pixelWidth * scene.pixelHeight * 3)) * 4 / 3) + 2
-    const myArr = new Uint8Array(base64Size)
-    myArr.set(Module.HEAPU8.subarray(outputPtr, Number(outputPtr) + base64Size))
+      const base64Size = ((26 + (scene.pixelWidth * scene.pixelHeight * 3)) * 4 / 3) + 2
+      const myArr = new Uint8Array(base64Size)
+      myArr.set(Module.HEAPU8.subarray(outputPtr, Number(outputPtr) + base64Size))
 
-    const utf8Decode = new TextDecoder()
-    const msg = utf8Decode.decode(myArr)
+      const utf8Decode = new TextDecoder()
+      const msg = utf8Decode.decode(myArr)
 
-    setImage(msg)
+      setImage(msg)
 
     // api.destroy_buffer(p)
+    } catch (e) {
+      console.log('catch webasm:', e)
+    }
   })
 
   const onAddSphere = (): void => {
@@ -138,7 +143,7 @@ const Rt: React.FC<any> = () => {
 
         {
           scene.spheres.map((sphere, index) => (
-            <>
+            <div key={`sphere[${index}]`}>
               <InputField name={`sphere[${index}].radius`} value={sphere.radius} setValue={(value: number) => { updateScene(`${index} spheres.radius`, value) }} />
 
               <div className='inputVec3'>
@@ -158,7 +163,7 @@ const Rt: React.FC<any> = () => {
                   <InputField name='z' value={sphere.color.z * 255} setValue={(value: number) => { updateScene(`${index} spheres.color.z`, value / 255) }} />
                 </div>
               </div>
-            </>
+            </div>
           ))
         }
 

@@ -27,10 +27,11 @@ static int base64(int n, char msg[n], char e[])
 static char *saver(const scene_t scene, vec3_t **pixels)
 {
     int d, n = 26 + (scene.pixel_width * scene.pixel_height * 3);
-    char file[n];
+    char *file = malloc(n);
     unsigned short s;
 
     memcpy(&file[0], "BM", 2);
+
     d = n, memcpy(&file[2], &d, 4);
     d = 0, memcpy(&file[6], &d, 4);
     d = 26, memcpy(&file[10], &d, 4);
@@ -56,24 +57,20 @@ static char *saver(const scene_t scene, vec3_t **pixels)
     FILE *fp = fopen("./image.bmp", "w");
     fwrite(file, 1, n, fp);
     fclose(fp);
+    free(file);
+    return NULL;
 #else
     char *base64_encrypted = malloc((n*4 / 3) + 2);
     base64(n, file, base64_encrypted);
-#endif
-
-    for (int y = 0; y < scene.pixel_height; ++y)
-        free(pixels[y]);
-    free(pixels);
-
-#ifdef MAIN
-    return NULL;
-#else
+    free(file);
     return base64_encrypted;
 #endif
 }
 
 char* rt(char *unparsed_scene)
 {
+    if (unparsed_scene == NULL) return NULL;
+    
     scene_t scene = scene_parser(unparsed_scene);
     vec3_t **pixels = malloc(scene.pixel_height * sizeof (vec3_t *));
     camera_t camera = camera_init(scene.camera, (vec3_t) { 0, 0, 1 }, (vec3_t) { 0, 1, 0 }, 90, scene.pixel_height * scene.antialiasing, scene.pixel_width * scene.antialiasing);
@@ -117,5 +114,11 @@ char* rt(char *unparsed_scene)
         }
     }
 
-    return saver(scene, pixels);
+    char *base64_encrypted = saver(scene, pixels);
+
+    for (int y = 0; y < scene.pixel_height; ++y)
+        free(pixels[y]);
+    free(pixels);
+
+    return base64_encrypted;
 }
