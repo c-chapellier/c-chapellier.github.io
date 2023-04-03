@@ -7,7 +7,7 @@ import './Header.scss'
 const Header: React.FC<any> = () => {
   return (
     <header>
-      <Logo />
+      <Logo className='logo' />
 
       <div className='links'>
         {

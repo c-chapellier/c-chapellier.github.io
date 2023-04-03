@@ -1,7 +1,7 @@
 {
     "pixelHeight": 400,
     "pixelWidth": 400,
-    "antialiasing": 4,
+    "antialiasing": 1,
     "camera": {
         "x": 0,
         "y": 0,

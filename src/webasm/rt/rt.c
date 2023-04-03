@@ -94,7 +94,7 @@ char* rt(char *unparsed_scene)
                     );
 
                     double dist_min = INFINITY;
-                    vec3_t color = { 0, 0, 0};
+                    vec3_t color = { 0, 0, 0 };
 
                     for (int i = 0; i < scene.n_spheres; ++i)
                     {
@@ -104,7 +104,7 @@ char* rt(char *unparsed_scene)
                             dist_min = inter.distance;
                             color = vec3_mult(
                                 scene.spheres[i].color,
-                                fabs(cos(inter.angle)) / pow(scene.antialiasing, 2)
+                                fabs(cos(inter.angle)) / (scene.antialiasing*scene.antialiasing)
                             );
                         }
                     }

@@ -6,12 +6,16 @@ header {
     align-items: center;
     background: var(--color-light-black);
     height: var(--header-height);
-}
 
-.links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
-    padding-right: 3rem;
+    .logo {
+        padding-left: 1.2rem;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        padding-right: 3rem;
+    }
 }
