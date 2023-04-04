@@ -3,7 +3,7 @@
     width: 70%;
     border: 1px solid var(--color-black);
 
-    .titleBar {
+    .title-bar {
         height: 2rem;
         width: 100%;
         display: flex;
@@ -24,19 +24,19 @@
             padding-top: 6px;
         }
 
-        .minimizeButton {
+        .minimize-button {
             border: none;
             border-right: 1px solid var(--color-black);
         }
 
-        .moveButton {
+        .move-button {
             cursor: pointer;
             border: none;
             border-left: 1px solid var(--color-black);
         }
     }
 
-    .menuBar {
+    .menu-bar {
         height: 2rem;
         width: 100%;
         display: flex;
@@ -58,7 +58,27 @@
         }
     }
 
-    .clientArea {
+    .client-area {
         background: var(--color-grey);
+
+        h4 {
+            color: var(--color-black);
+            padding: 0.3rem;
+            padding-left: 1rem;
+        }
+
+        ol {
+
+        }
+
+        li {
+
+        }
+
+        h5 {
+            color: var(--color-black);
+            padding: .2rem;
+            padding-left: 2rem;
+        }
     }
 }

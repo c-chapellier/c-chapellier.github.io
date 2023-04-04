@@ -26,26 +26,26 @@ const Home: React.FC<any> = () => {
 
   const lines = [
     (
-      <div key='codeLine1' className='codeLine'>
+      <div key='code-line1' className='code-line'>
         <h4 style={{ color: 'var(--color-2)' }}>#include&nbsp;</h4>
         <h4 style={{ color: 'var(--color-4)' }}>{'<stdio>'}</h4>
       </div>
     ),
     (
-      <div key='codeLine2' className='codeLine'>&nbsp;</div>
+      <div key='code-line2' className='code-line'>&nbsp;</div>
     ),
     (
-      <div key='codeLine3' className='codeLine'>
+      <div key='code-line3' className='code-line'>
         <h4 style={{ color: 'var(--color-2)' }}>#define&nbsp;</h4>
         <h4 style={{ color: 'var(--color-3)' }}>PASSWORD&nbsp;</h4>
         <h4 style={{ color: 'var(--color-3)' }}>root</h4>
       </div>
     ),
     (
-      <div key='codeLine4' className='codeLine'>&nbsp;</div>
+      <div key='code-line4' className='code-line'>&nbsp;</div>
     ),
     (
-      <div key='codeLine5' className='codeLine'>
+      <div key='code-line5' className='code-line'>
         <h4 style={{ color: 'var(--color-3)' }}>int&nbsp;</h4>
         <h4 style={{ color: 'var(--color-1)' }}>main</h4>
         <h4>{'('}</h4>
@@ -56,12 +56,12 @@ const Home: React.FC<any> = () => {
       </div>
     ),
     (
-      <div key='codeLine6' className='codeLine'>
+      <div key='code-line6' className='code-line'>
         <h4>{'{'}</h4>
       </div>
     ),
     (
-      <div key='codeLine7' className='codeLine'>
+      <div key='code-line7' className='code-line'>
         <h4 style={{ color: 'var(--color-3)' }}>&nbsp;&nbsp;&nbsp;&nbsp;const char&nbsp;</h4>
         <h4>*string =&nbsp;</h4>
         <h4 style={{ color: 'var(--color-1)' }}>malloc</h4>
@@ -72,20 +72,20 @@ const Home: React.FC<any> = () => {
       </div>
     ),
     (
-      <div key='codeLine8' className='codeLine'>&nbsp;</div>
+      <div key='code-line8' className='code-line'>&nbsp;</div>
     ),
     (
-      <div key='codeLine9' className='codeLine'>
+      <div key='code-line9' className='code-line'>
         <h4>&nbsp;&nbsp;&nbsp;&nbsp;string =&nbsp;</h4>
         <h4 style={{ color: 'var(--color-4)' }}>{'"Hello World!"'}</h4>
         <h4>;</h4>
       </div>
     ),
     (
-      <div key='codeLine10' className='codeLine'>&nbsp;</div>
+      <div key='code-line10' className='code-line'>&nbsp;</div>
     ),
     (
-      <div key='codeLine11' className='codeLine'>
+      <div key='code-line11' className='code-line'>
         <h4>&nbsp;&nbsp;&nbsp;&nbsp;there:</h4>
         <h4 style={{ color: 'var(--color-2)' }}>for&nbsp;</h4>
         <h4>{'('}</h4>
@@ -94,12 +94,12 @@ const Home: React.FC<any> = () => {
       </div>
     ),
     (
-      <div key='codeLine12' className='codeLine'>
+      <div key='code-line12' className='code-line'>
         <h4>&nbsp;&nbsp;&nbsp;&nbsp;{'{'}</h4>
       </div>
     ),
     (
-      <div key='codeLine13' className='codeLine'>
+      <div key='code-line13' className='code-line'>
         <h4 style={{ color: 'var(--color-1)' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf</h4>
         <h4>{'('}</h4>
         <h4 style={{ color: 'var(--color-4)' }}>{'\'%d\''}</h4>
@@ -107,20 +107,20 @@ const Home: React.FC<any> = () => {
       </div>
     ),
     (
-      <div key='codeLine14' className='codeLine'>
+      <div key='code-line14' className='code-line'>
         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++i;</h4>
       </div>
     ),
     (
-      <div key='codeLine15' className='codeLine'>
+      <div key='code-line15' className='code-line'>
         <h4>&nbsp;&nbsp;&nbsp;&nbsp;{'}'}</h4>
       </div>
     ),
     (
-      <div key='codeLine16' className='codeLine'>&nbsp;</div>
+      <div key='code-line16' className='code-line'>&nbsp;</div>
     ),
     (
-      <div key='codeLine17' className='codeLine'>
+      <div key='code-line17' className='code-line'>
         <h4 style={{ color: 'var(--color-2)' }}>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;</h4>
         <h4>{'('}</h4>
         <h4 style={{ color: 'var(--color-3)' }}>PASSWORD&nbsp;</h4>
@@ -128,12 +128,12 @@ const Home: React.FC<any> = () => {
       </div>
     ),
     (
-      <div key='codeLine18' className='codeLine'>
+      <div key='code-line18' className='code-line'>
         <h4>&nbsp;&nbsp;&nbsp;&nbsp;{'{'}</h4>
       </div>
     ),
     (
-      <div key='codeLine19' className='codeLine'>
+      <div key='code-line19' className='code-line'>
         <h4 style={{ color: 'var(--color-1)' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf</h4>
         <h4>{'('}</h4>
         <h4 style={{ color: 'var(--color-4)' }}>{'""'}</h4>
@@ -141,21 +141,21 @@ const Home: React.FC<any> = () => {
       </div>
     ),
     (
-      <div key='codeLine20' className='codeLine'>
+      <div key='code-line20' className='code-line'>
         <h4 style={{ color: 'var(--color-2)' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goto&nbsp;</h4>
         <h4>there;</h4>
       </div>
     ),
     (
-      <div key='codeLine21' className='codeLine'>
+      <div key='code-line21' className='code-line'>
         <h4>&nbsp;&nbsp;&nbsp;&nbsp;{'}'}</h4>
       </div>
     ),
     (
-      <div key='codeLine22' className='codeLine'>&nbsp;</div>
+      <div key='code-line22' className='code-line'>&nbsp;</div>
     ),
     (
-      <div key='codeLine23' className='codeLine'>
+      <div key='code-line23' className='code-line'>
         <h4 style={{ color: 'var(--color-1)' }}>&nbsp;&nbsp;&nbsp;&nbsp;printf</h4>
         <h4>{'('}</h4>
         <h4 style={{ color: 'var(--color-4)' }}>{'"all good\\n"'}</h4>
@@ -163,16 +163,16 @@ const Home: React.FC<any> = () => {
       </div>
     ),
     (
-      <div key='codeLine24' className='codeLine'>&nbsp;</div>
+      <div key='code-line24' className='code-line'>&nbsp;</div>
     ),
     (
-      <div key='codeLine25' className='codeLine'>
+      <div key='code-line25' className='code-line'>
         <h4 style={{ color: 'var(--color-2)' }}>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</h4>
         <h4>{'(0);'}</h4>
       </div>
     ),
     (
-      <div key='codeLine26' className='codeLine'>
+      <div key='code-line26' className='code-line'>
         <h4>{'}'}</h4>
       </div>
     )
@@ -181,20 +181,20 @@ const Home: React.FC<any> = () => {
   return (
     <section id='home'>
       <div className='home'>
-        <div className='textAndCode'>
+        <div className='text-and-code'>
           <div className='text'>
-            <div className='textLine'>
+            <div className='text-line'>
               <h1 style={{ color: 'var(--color-1)' }}>Hi!</h1>
             </div>
-            <div className='textLine'>
+            <div className='text-line'>
               <h1>My name is&nbsp;</h1>
               <h1 style={{ color: 'var(--color-2)' }}>Corentin Chapellier</h1>
             </div>
-            <div className='textLine'>
+            <div className='text-line'>
               <h4>I am a&nbsp;</h4>
               <h4 style={{ color: 'var(--color-3)' }}>Software Developer</h4>
             </div>
-            <div className='textLine'>
+            <div className='text-line'>
               <h4>Here is my&nbsp;</h4>
               <h4 style={{ color: 'var(--color-4)' }}>Personal Site</h4>
             </div>
@@ -204,17 +204,17 @@ const Home: React.FC<any> = () => {
             {
               lines.map((line, index) => index < displayedLines
                 ? line
-                : <div key={`space${index}`} className='codeLine'>&nbsp;</div>
+                : <div key={`space${index}`} className='code-line'>&nbsp;</div>
               )
             }
           </div>
         </div>
 
-        <div className='profilePictureWrapperWrapper'>
-          <div className='spacerTop'></div>
-          <div className='profilePictureWrapper'>
-            <div className='profilePictureBackground' />
-            <img src={require('../../assets/ProfilePicture.jpg')} alt="profile picture" className='profilePicture'/>
+        <div className='profile-picture-wrapper-wrapper'>
+          <div className='spacer-top'></div>
+          <div className='profile-picture-wrapper'>
+            <div className='profile-picture-background' />
+            <img className='profile-picture' src={require('../../assets/ProfilePicture.jpg')} alt='profile picture' />
           </div>
         </div>
       </div>

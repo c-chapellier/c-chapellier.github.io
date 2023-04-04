@@ -127,14 +127,14 @@ const Rt: React.FC<any> = () => {
   return (
     <div className='rt'>
       <img src={`data:image/bmp;base64,${image}`} />
-      <form className='inputScene'>
+      <form className='input-scene'>
         <InputField name='pixelHeight' value={scene.pixelHeight} setValue={(value: number) => { updateScene('pixelHeight', value) }} />
         <InputField name='pixelWidth' value={scene.pixelWidth} setValue={(value: number) => { updateScene('pixelWidth', value) }} />
         <InputField name='antialiasing' value={scene.antialiasing} setValue={(value: number) => { updateScene('antialiasing', value) }} />
 
-        <div className='inputVec3'>
+        <div className='input-vec3'>
           <p>camera:</p>
-          <div className='inputVec3Fields'>
+          <div className='input-vec3-fields'>
             <InputField name='x' value={scene.camera.x} setValue={(value: number) => { updateScene('camera.x', value) }} />
             <InputField name='y' value={scene.camera.y} setValue={(value: number) => { updateScene('camera.y', value) }} />
             <InputField name='z' value={scene.camera.z} setValue={(value: number) => { updateScene('camera.z', value) }} />
@@ -146,18 +146,18 @@ const Rt: React.FC<any> = () => {
             <div key={`sphere[${index}]`}>
               <InputField name={`sphere[${index}].radius`} value={sphere.radius} setValue={(value: number) => { updateScene(`${index} spheres.radius`, value) }} />
 
-              <div className='inputVec3'>
+              <div className='input-vec3'>
                 <p>{`sphere[${index}].center:`}</p>
-                <div className='inputVec3Fields'>
+                <div className='input-vec3-fields'>
                   <InputField name='x' value={sphere.center.x} setValue={(value: number) => { updateScene(`${index} spheres.center.x`, value) }} />
                   <InputField name='y' value={sphere.center.y} setValue={(value: number) => { updateScene(`${index} spheres.center.y`, value) }} />
                   <InputField name='z' value={sphere.center.z} setValue={(value: number) => { updateScene(`${index} spheres.center.z`, value) }} />
                 </div>
               </div>
 
-              <div className='inputVec3'>
+              <div className='input-vec3'>
                 <p>{`sphere[${index}].color:`}</p>
-                <div className='inputVec3Fields'>
+                <div className='input-vec3-fields'>
                   <InputField name='x' value={sphere.color.x * 255} setValue={(value: number) => { updateScene(`${index} spheres.color.x`, value / 255) }} />
                   <InputField name='y' value={sphere.color.y * 255} setValue={(value: number) => { updateScene(`${index} spheres.color.y`, value / 255) }} />
                   <InputField name='z' value={sphere.color.z * 255} setValue={(value: number) => { updateScene(`${index} spheres.color.z`, value / 255) }} />
@@ -169,7 +169,7 @@ const Rt: React.FC<any> = () => {
 
         <button
           type='button'
-          className='addSphere'
+          className='add-sphere'
           onClick={onAddSphere}
         >
           Add sphere

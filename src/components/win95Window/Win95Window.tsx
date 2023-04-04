@@ -65,15 +65,15 @@ const Win95Window: React.FC<Win95WindowProps> = (props) => {
       onClick={e => onSelected(title)}
     >
       <div
-        className='titleBar'
+        className='title-bar'
         style={{
           background: selected ? 'var(--color-blue)' : 'var(--color-grey)'
         }}
       >
-        <button className='minimizeButton'>-</button>
+        <button className='minimize-button'>-</button>
         <p style={{ color: selected ? 'var(--color-white)' : 'var(--color-black)' }}>{title}</p>
         <button
-          className='moveButton'
+          className='move-button'
           onMouseDown={onMouseDown}
           onMouseUp={onMouseUp}
           onMouseMove={onMouseMove}
@@ -81,14 +81,14 @@ const Win95Window: React.FC<Win95WindowProps> = (props) => {
           {'>'}
         </button>
       </div>
-      <div className='menuBar'>
+      <div className='menu-bar'>
         {
           menuBarItems.map((item, index) => (
             <p key={index}>{item}</p>
           ))
         }
       </div>
-      <div className='clientArea'>
+      <div className='client-area'>
         {content}
       </div>
     </div>
