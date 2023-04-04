@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "__locale": "c",
-        "sstream": "c",
-        "__node_handle": "c",
-        "rt.h": "c"
-    }
-}

@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-scroll'
 import './NavButton.scss'
 
 interface NavButtonProps {
   index: number
-  text: string
+  menu: { name: string, sectionId: string }
 }
 
 const NavButton: React.FC<NavButtonProps> = (props) => {
-  const { index, text } = props
+  const { index, menu } = props
   const colorIndex = (index % 4) + 1
 
   const [isHover, setIsHover] = React.useState(false)
@@ -21,17 +22,23 @@ const NavButton: React.FC<NavButtonProps> = (props) => {
   }
 
   return (
-    <h3
-      className='button'
+    <Link
+      className='link'
+      to={menu.sectionId}
+      smooth={true}
+      offset={0}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{
-        color: `var(--color-${colorIndex})`,
-        background: isHover ? 'var(--color-dark-black)' : ''
-      }}
     >
-      {text}
-    </h3>
+      <h3
+        style={{
+          color: `var(--color-${colorIndex})`,
+          background: isHover ? 'var(--color-dark-black)' : ''
+        }}
+      >
+        {menu.name}
+      </h3>
+    </Link>
   )
 }
 

@@ -11,8 +11,8 @@ const Header: React.FC<any> = () => {
 
       <div className='links'>
         {
-          menus.map((text, index) => (
-            <NavButton key={index} index={index} text={text} />
+          menus.map((menu, index) => (
+            <NavButton key={index} index={index} menu={menu} />
           ))
         }
       </div>

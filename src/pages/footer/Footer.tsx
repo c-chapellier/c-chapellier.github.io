@@ -26,9 +26,9 @@ const Footer: React.FC<any> = () => {
 
       <div className='links'>
         {
-          menus.map((text, index) => (
+          menus.map((menu, index) => (
             <div key={index} className='link'>
-              <NavButton key={index} index={index} text={text} />
+              <NavButton key={index} index={index} menu={menu} />
             </div>
           ))
         }
