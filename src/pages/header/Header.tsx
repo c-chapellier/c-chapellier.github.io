@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../../components/logo/Logo'
 import NavButton from '../../components/navButton/NavButton'
-import { menus } from '../../utils/constants'
+import { menus } from '../../constants/constants'
 import './Header.scss'
 
 const Header: React.FC<any> = () => {

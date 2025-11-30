@@ -23,4 +23,22 @@
             height: 100%;
         }
     }
+
+    .dock {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--color-grey);
+
+        button {
+            margin: 3px;
+            margin-bottom: 5px;
+            padding: 2px;
+            border: 2px solid var(--color-black);
+            border-radius: 2px 5px 2px 5px;
+            box-shadow: 2px 2px 0px 0px var(--color-black);
+            font-size: large;
+            color: var(--color-black);
+        }
+    }
 }

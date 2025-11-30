@@ -36,7 +36,7 @@ const Developer: React.FC<any> = () => {
       title: 'Raytracer',
       menuBarItems: ['Disk', 'View', 'Options'],
       content: <Rt />,
-      defaultPosition: { x: 250, y: 350 }
+      defaultPosition: { x: 250, y: 300 }
     },
     {
       title: 'Skills',
@@ -65,16 +65,21 @@ const Developer: React.FC<any> = () => {
             )
           : (
               <>
-                {
-                  windows.map((window, index) => (
-                    <Win95Window
-                      key={index}
-                      {...window}
-                      selected={window.title === selectedWindow}
-                      onSelected={onSelected}
-                    />
-                  ))
-                }
+                <>
+                  {
+                    windows.map((window, index) => (
+                      <Win95Window
+                        key={index}
+                        {...window}
+                        selected={window.title === selectedWindow}
+                        onSelected={onSelected}
+                      />
+                    ))
+                  }
+                </>
+                <div className='dock'>
+                  <button>Developer</button>
+                </div>
               </>
             )
       }
