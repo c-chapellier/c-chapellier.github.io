@@ -4,7 +4,7 @@ import './NavButton.scss'
 
 interface NavButtonProps {
   index: number
-  menu: { name: string, sectionId: string }
+  menu: { name: string, sectionId?: string, link?: string }
 }
 
 const NavButton: React.FC<NavButtonProps> = (props) => {
@@ -21,7 +21,8 @@ const NavButton: React.FC<NavButtonProps> = (props) => {
     setIsHover(false)
   }
 
-  return (
+  return menu.sectionId !== undefined
+    ? (
     <Link
       className='link'
       to={menu.sectionId}
@@ -39,7 +40,26 @@ const NavButton: React.FC<NavButtonProps> = (props) => {
         {menu.name}
       </h3>
     </Link>
-  )
+      )
+    : (
+    <a
+      className='link'
+      href={menu.link}
+      target='_blank'
+      rel='noreferrer'
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <h3
+        style={{
+          color: `var(--color-${colorIndex})`,
+          background: isHover ? 'var(--color-dark-black)' : ''
+        }}
+      >
+        {menu.name}
+      </h3>
+    </a>
+      )
 }
 
 export default NavButton

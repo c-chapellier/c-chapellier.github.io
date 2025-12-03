@@ -1,4 +1,3 @@
-
 const menus = [
   {
     name: 'Home',
@@ -11,6 +10,14 @@ const menus = [
   {
     name: 'Developer',
     sectionId: 'developer'
+  },
+  {
+    name: 'Straightliner',
+    link: 'https://www.straightliner.c-chapellier.com'
+  },
+  {
+    name: 'Facebook Friends Grapher',
+    link: 'https://www.facebook-friends-grapher.c-chapellier.com/'
   }
 ]
 
